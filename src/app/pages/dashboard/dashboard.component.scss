@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/buttons";
 
 main {
   @extend .container;
@@ -20,9 +21,50 @@ main {
 
         li {
           margin-left: 1em;
+          cursor: pointer;
+
+          &:hover {
+            color: #efefef;
+          }
         }
       }
 
     }
   }
+
+  section.title {
+
+    font-family: Montserrat, sans-serif;
+    margin-top: -105px;
+    margin-left: 92px;
+    height: calc(100vh - 116px);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 56pt;
+      font-weight: bold;
+    }
+
+    span {
+      font-family: Raleway, sans-serif;
+      font-size: 16pt;
+    }
+
+    div.wrapper {
+      a {
+        @extend .btn, .btn-success;
+        padding-left: 32px;
+        padding-right: 32px;
+        height: 56px;
+        line-height: 38px;
+        border-radius: 28px;
+        font-size: 16pt;
+      }
+    }
+  }
+
+
 }
