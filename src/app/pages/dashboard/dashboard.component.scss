@@ -3,6 +3,7 @@
 
 main {
   @extend .container;
+  color: white;
 
   header {
     margin: 16px;
@@ -35,9 +36,9 @@ main {
   section.title {
 
     font-family: Montserrat, sans-serif;
-    margin-top: -105px;
+    margin-top: -116px;
     margin-left: 92px;
-    height: calc(100vh - 116px);
+    height: 100vh;
     color: white;
     display: flex;
     justify-content: center;
@@ -63,6 +64,16 @@ main {
         border-radius: 28px;
         font-size: 16pt;
       }
+    }
+  }
+
+  section.about {
+    height: 100vh;
+    font-family: Montserrat, sans-serif;
+
+    h1 {
+      padding: 140px 0 40px 0;
+      box-sizing: content-box;
     }
   }
 
