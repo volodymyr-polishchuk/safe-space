@@ -6,21 +6,14 @@
       </nav>
 
       <div class="chat">
-        <article class="left">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </article>
-        <article class="left">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </article>
-
-        <article class="right">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <article class="left" *ngFor="let message of messages$">
+          {{ message.title }}
         </article>
       </div>
 
       <div class="message-bar">
         <img class="add-image" src="" alt="">
-        <input type="text" placeholder="Введіть повідомлення...">
+        <input type="text" placeholder="Введіть повідомлення..." (keydown)="enterHandler($event)">
         <img class="send-message" src="" alt="">
         <img class="call" src="" alt="">
       </div>
