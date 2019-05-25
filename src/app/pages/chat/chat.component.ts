@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ChatService} from '../../service/chat.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-chat',
@@ -10,11 +11,20 @@ export class ChatComponent implements OnInit {
 
   messages$;
 
-  constructor(private chat: ChatService) { }
+  constructor(private chat: ChatService,
+              private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.chat.getMessage(value => {
-      this.messages$ = value;
+    this.activatedRoute.params.subscribe(value => {
+      console.log(value);
+      if (value.key) {
+        this.chat.getChat(value.key);
+      } else {
+        this.chat.getChat();
+      }
+      this.chat.getMessage(v => {
+        this.messages$ = v;
+      });
     });
   }
 

@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'category', component: SelectCategoryComponent },
   { path: 'psychologist', component: SelectPsychologistComponent },
   { path: 'chat', component: ChatComponent },
+  { path: 'chat/:key', component: ChatComponent },
   { path: 'profile', component: ProfileComponent }
 ];
 

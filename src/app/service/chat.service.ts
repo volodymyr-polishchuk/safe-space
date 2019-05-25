@@ -13,9 +13,19 @@ export class ChatService {
   messages: Array<ChatMessage>;
 
   constructor(private firebase: AngularFireDatabase) {
-    this.chats$ = this.firebase.list('/chat');
-    const chat = this.chats$.push([]);
-    this.messages$ = this.firebase.list(`/chat/${chat.key}/messages`);
+  }
+
+  getChat(existKey: string = null) {
+    let key;
+    if (existKey) {
+      key = existKey;
+    } else {
+      this.chats$ = this.firebase.list('/chat');
+      const chat = this.chats$.push([]);
+      key = chat.key;
+    }
+    console.log(key);
+    this.messages$ = this.firebase.list(`/chat/${key}/messages`);
   }
 
   addMessage(chatMessage: ChatMessage) {

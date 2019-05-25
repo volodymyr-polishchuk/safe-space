@@ -15,6 +15,8 @@ import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
+import { SelectChatComponent } from './pages/select-chat/select-chat.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { CategoryCardComponent } from './components/category-card/category-card.
     SelectPsychologistComponent,
     ChatComponent,
     ProfileComponent,
-    CategoryCardComponent
+    CategoryCardComponent,
+    SelectChatComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
