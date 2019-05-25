@@ -14,6 +14,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
+import { CategoryCardComponent } from './components/category-card/category-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
     SelectCategoryComponent,
     SelectPsychologistComponent,
     ChatComponent,
-    ProfileComponent
+    ProfileComponent,
+    CategoryCardComponent
   ],
   imports: [
     BrowserModule,

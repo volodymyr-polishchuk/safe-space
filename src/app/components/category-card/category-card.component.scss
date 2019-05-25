@@ -1,0 +1,16 @@
+@import "~bootstrap/scss/bootstrap";
+
+div {
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  img {
+    max-width: 120px;
+    background-color: silver;
+    border-radius: 11px;
+  }
+
+}

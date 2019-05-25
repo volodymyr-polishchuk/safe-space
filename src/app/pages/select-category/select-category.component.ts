@@ -10,6 +10,7 @@ export class SelectCategoryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

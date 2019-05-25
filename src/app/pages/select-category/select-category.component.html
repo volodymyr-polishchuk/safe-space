@@ -1,3 +1,63 @@
-<p>
-  select-category works!
-</p>
+<main>
+
+  <header>
+    <img src="../../../assets/icons/logo.png" alt="" height="85" width="86">
+  </header>
+
+  <section class="form">
+    <aside class="image">
+
+    </aside>
+    <form>
+      <h2>{{ 'The last step is left' | translate }}</h2>
+
+      <label>Стать</label>
+      <br>
+      <div class="form-check">
+        <input id="male" type="radio" class="form-check-input" name="sex">
+        <label for="male" class="form-check-label">{{ 'Man' | translate }}</label>
+      </div>
+
+      <div class="form-check">
+        <input id="female" type="radio" class="form-check-input" name="sex">
+        <label for="female" class="form-check-label">{{ 'Woman' | translate }}</label>
+      </div>
+      <br>
+
+      <div class="form-group">
+        <label for="years">{{ 'Year' | translate }}</label>
+        <input type="number" id="years" class="form-control" value="2019" max="2100">
+      </div>
+
+      <h2>{{ 'Categories' | translate }}</h2>
+      <div class="category">
+        <app-category-card
+          image="https://cdn4.iconfinder.com/data/icons/car-services-36-icons/110/Car_servicess-19-512.png"
+          [title]="'Child psychologist' | translate">
+
+        </app-category-card>
+        <app-category-card
+          image="https://cdn4.iconfinder.com/data/icons/car-services-36-icons/110/Car_servicess-19-512.png"
+          [title]="'Child psychologist' | translate">
+
+        </app-category-card>
+        <app-category-card
+          image="https://cdn4.iconfinder.com/data/icons/car-services-36-icons/110/Car_servicess-19-512.png"
+          [title]="'Child psychologist' | translate">
+
+        </app-category-card>
+        <app-category-card
+          image="https://cdn4.iconfinder.com/data/icons/car-services-36-icons/110/Car_servicess-19-512.png"
+          [title]="'Child psychologist' | translate">
+
+        </app-category-card>
+      </div>
+
+      <div class="action">
+        <button class="btn btn-success">{{ 'Start the conversation' | translate }}</button>
+      </div>
+
+    </form>
+  </section>
+
+</main>
