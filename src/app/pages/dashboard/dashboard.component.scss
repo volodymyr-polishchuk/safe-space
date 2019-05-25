@@ -57,12 +57,12 @@ main {
     div.wrapper {
       a {
         @extend .btn, .btn-success;
-        padding-left: 32px;
-        padding-right: 32px;
         height: 56px;
         line-height: 38px;
-        border-radius: 28px;
-        font-size: 16pt;
+        margin-top: 56px;
+        border-radius: 11px;
+        font-size: 11pt;
+        width: 176px;
       }
     }
   }
