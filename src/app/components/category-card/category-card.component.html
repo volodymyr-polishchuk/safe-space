@@ -1,4 +1,7 @@
 <div>
-  <img [src]="image" alt="Category image">
+  <div class="image-wrapper" [class.active]="active">
+    <img [src]="image" alt="Category image">
+    <div class="badge">✔</div>
+  </div>
   <span>{{ title }}</span>
 </div>

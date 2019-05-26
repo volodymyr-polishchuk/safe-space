@@ -13,12 +13,12 @@
 
       <label>Стать</label>
       <br>
-      <div class="form-check">
+      <div class="form-check form-check-inline">
         <input id="male" type="radio" class="form-check-input" name="sex">
         <label for="male" class="form-check-label">{{ 'Man' | translate }}</label>
       </div>
 
-      <div class="form-check">
+      <div class="form-check form-check-inline">
         <input id="female" type="radio" class="form-check-input" name="sex">
         <label for="female" class="form-check-label">{{ 'Woman' | translate }}</label>
       </div>
@@ -32,23 +32,11 @@
       <h2>{{ 'Categories' | translate }}</h2>
       <div class="category">
         <app-category-card
-          image="https://cdn4.iconfinder.com/data/icons/car-services-36-icons/110/Car_servicess-19-512.png"
-          [title]="'Child psychologist' | translate">
-
-        </app-category-card>
-        <app-category-card
-          image="https://cdn4.iconfinder.com/data/icons/car-services-36-icons/110/Car_servicess-19-512.png"
-          [title]="'Child psychologist' | translate">
-
-        </app-category-card>
-        <app-category-card
-          image="https://cdn4.iconfinder.com/data/icons/car-services-36-icons/110/Car_servicess-19-512.png"
-          [title]="'Child psychologist' | translate">
-
-        </app-category-card>
-        <app-category-card
-          image="https://cdn4.iconfinder.com/data/icons/car-services-36-icons/110/Car_servicess-19-512.png"
-          [title]="'Child psychologist' | translate">
+          *ngFor="let category of categories"
+          [image]="category.url"
+          [title]="category.name | translate"
+          [active]="isCategorySelected(category)"
+          (click)="toggleCategory(category)">
 
         </app-category-card>
       </div>

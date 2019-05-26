@@ -9,6 +9,7 @@ export class CategoryCardComponent implements OnInit {
 
   @Input() image: string;
   @Input() title: string;
+  @Input() active: boolean;
 
   constructor() { }
 

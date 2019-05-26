@@ -7,10 +7,34 @@ div {
   align-items: center;
   justify-content: flex-start;
 
+  .badge {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    display: none;
+    right: -8px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 18px;
+    top: -8px;
+    background-color: #1996ff;
+  }
+
+  .image-wrapper {
+    position: relative;
+  }
+
   img {
     max-width: 120px;
     background-color: silver;
     border-radius: 11px;
+  }
+
+  .active {
+    .badge {
+      display: block;
+    }
   }
 
 }

@@ -69,8 +69,9 @@ main {
       img {
         min-width: 32px;
         min-height: 32px;
-        background-color: silver;
+        padding: 4px;
         margin: 4px;
+        cursor: pointer;
       }
 
       img.add-image {
@@ -130,6 +131,7 @@ main {
     .profile {
       width: 80%;
       margin: 8px 32px;
+      border-radius: 11px;
     }
 
   }
