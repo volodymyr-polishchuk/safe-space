@@ -5,31 +5,42 @@ main {
   @extend .container;
   color: white;
 
+  header {
+    margin-top: 32px;
+  }
+
   section.form {
     display: flex;
     min-height: 480px;
     background-color: white;
     border-radius: 15px;
-    margin: 60px 100px;
+    margin: 60px 0;
     box-shadow: 0 0 8px 2px #dbe1e4;
 
     aside.image {
-      width: 35%;
+      width: 80%;
       padding: 16px;
       background-image: url("../../../assets/step2.png");
+      background-size: cover;
       border-bottom-left-radius: 15px;
       border-top-left-radius: 15px;
     }
 
     form {
       color: black;
-      padding: 16px;
+      padding: 60px;
       width: 100%;
+
+      h2 {
+        font-weight: bold;
+      }
 
       .category {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
       }
 
       .action {

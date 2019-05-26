@@ -1,7 +1,7 @@
 <main>
 
   <header>
-    <img src="../../../assets/icons/logo.png" alt="" height="85" width="86">
+    <img src="../../../assets/icons/LOGO%20(1).png" alt="" height="85" width="86">
   </header>
 
   <section class="form">
@@ -30,16 +30,19 @@
       </div>
 
       <h2>{{ 'Categories' | translate }}</h2>
-      <div class="category">
-        <app-category-card
-          *ngFor="let category of categories"
-          [image]="category.url"
-          [title]="category.name | translate"
-          [active]="isCategorySelected(category)"
-          (click)="toggleCategory(category)">
+      <div class="category-wrapper">
+        <div class="category">
+          <app-category-card
+            *ngFor="let category of categories"
+            [image]="category.url"
+            [title]="category.name | translate"
+            [active]="isCategorySelected(category)"
+            (click)="toggleCategory(category)">
 
-        </app-category-card>
+          </app-category-card>
+        </div>
       </div>
+
 
       <div class="action">
         <button class="btn btn-success" type="button" routerLink="/chat">{{ 'Start the conversation' | translate }}</button>

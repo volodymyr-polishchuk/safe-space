@@ -11,7 +11,7 @@ export class SelectCategoryComponent implements OnInit {
   categories: Category[] = [
     {
       name: 'Child psychologist',
-      url: 'https://cdn4.iconfinder.com/data/icons/car-services-36-icons/110/Car_servicess-19-512.png',
+      url: '/assets/icons/child_psy.png',
       description: ''
     },
     {
@@ -20,8 +20,8 @@ export class SelectCategoryComponent implements OnInit {
       description: ''
     },
     {
-      name: 'Psychiatrist',
-      url: '/assets/icons/psychotherapy.png',
+      name: 'Psychologist sexologist',
+      url: '/assets/icons/love.png',
       description: ''
     },
     {
