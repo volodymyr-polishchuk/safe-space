@@ -6,10 +6,32 @@ div.main-wrapper {
   height: 100vh;
 }
 
+h2, h3 {
+  font-weight: bold;
+  font-size: 20pt;
+}
+
+h3 {
+  font-size: 18pt;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-size: 20pt;
+}
+
 main {
   @extend .container;
 
+  padding: 0;
+  border-radius: 11px;
+  max-height: 80vh;
   display: flex;
+  margin-top: 64px;
+  box-shadow: 0 0 20px 0 #2b07071a;
 
   section {
     flex: 2;
@@ -17,12 +39,22 @@ main {
     flex-direction: column;
 
     nav {
+      border-top-left-radius: 11px;
       height: 64px;
       background-color: #e6e6e6;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
       padding-left: 16px;
+
+      div.call {
+        padding: 16px;
+
+        img {
+          cursor: pointer;
+          padding: 4px;
+        }
+      }
     }
 
     div.chat {
@@ -91,33 +123,35 @@ main {
   aside {
     flex: 1;
     background-color: #ffffff;
-    height: 100vh;
+    margin-top: 96px;
+    margin-bottom: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     > img {
-      min-height: 128px;
-      min-width: 128px;
+      max-height: 96px;
+      max-width: 96px;
       background-color: silver;
       border-radius: 50%;
     }
 
     small {
-      padding: 32px;
+      padding: 14px 44px 28px;
     }
 
     div.contacts {
       display: flex;
       align-items: flex-start;
       flex-direction: column;
+      margin-bottom: 16px;
 
       div.contact {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 4px;
+        margin-top: 16px;
 
         img {
           min-height: 32px;
@@ -129,7 +163,7 @@ main {
     }
 
     .profile {
-      width: 80%;
+      width: 45%;
       margin: 8px 32px;
       border-radius: 11px;
     }
