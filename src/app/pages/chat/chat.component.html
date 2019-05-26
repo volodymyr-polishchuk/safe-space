@@ -10,7 +10,7 @@
       </nav>
 
       <div class="chat">
-        <article class="left" *ngFor="let message of messages$">
+        <article class="left" [class.right]="message.user !== getUser()" *ngFor="let message of messages$">
           {{ message.title }}
         </article>
       </div>
@@ -28,8 +28,7 @@
       <span class="text-muted">сімейний психолог</span>
       <small class="text-muted">
         Готова допомоготи в разі складної  ситуації
-        у ваших відносинах, пам’ятайте що все зале-
-        жить тільки від вас обоих!
+        у ваших відносинах, пам’ятайте що все залежить тільки від вас обоих!
       </small>
       <div class="contacts text-muted">
         <div class="contact">

@@ -40,4 +40,7 @@ export class ChatComponent implements OnInit {
     });
   }
 
+  getUser() {
+    return localStorage.getItem('user');
+  }
 }

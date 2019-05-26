@@ -10,6 +10,9 @@ export class AppComponent {
 
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('uk');
+    if (!localStorage.getItem('user')) {
+      localStorage.setItem('user', String(Math.random()));
+    }
   }
 
 }
