@@ -32,6 +32,19 @@ export class ChatService {
     this.messages$.push(chatMessage);
   }
 
+  getAllChat() {
+    const p = new Promise((resolve, reject) => {
+      const chats = [];
+      this.firebase.database.ref('/chat/').once('value', a => {
+        a.forEach(a1 => {
+          chats.push(a1);
+        });
+      });
+      resolve(chats);
+    });
+    return p;
+  }
+
   getMessage(callback: (value: ChatMessage[]) => void) {
     this.messages$.snapshotChanges().subscribe(
       list => {

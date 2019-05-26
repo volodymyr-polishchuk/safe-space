@@ -1,0 +1,9 @@
+<main>
+
+  <div class="card"
+       *ngFor="let chat of chats"
+       (click)="openChat(chat.key)">
+    {{ chat.key }}
+  </div>
+
+</main>

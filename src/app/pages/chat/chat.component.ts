@@ -39,4 +39,5 @@ export class ChatComponent implements OnInit {
       user: 'user'
     });
   }
+
 }

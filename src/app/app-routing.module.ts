@@ -5,6 +5,7 @@ import {SelectCategoryComponent} from './pages/select-category/select-category.c
 import {SelectPsychologistComponent} from './pages/select-psychologist/select-psychologist.component';
 import {ChatComponent} from './pages/chat/chat.component';
 import {ProfileComponent} from './pages/profile/profile.component';
+import {SelectChatComponent} from './pages/select-chat/select-chat.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'psychologist', component: SelectPsychologistComponent },
   { path: 'chat', component: ChatComponent },
   { path: 'chat/:key', component: ChatComponent },
-  { path: 'profile', component: ProfileComponent }
+  { path: 'profile', component: ProfileComponent },
+  { path: 'psychologist/chats', component: SelectChatComponent }
 ];
 
 @NgModule({

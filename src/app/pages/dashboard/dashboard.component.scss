@@ -13,7 +13,7 @@
 
 main {
   @extend .container;
-  color: white;
+  //color: white;
 
   header {
     margin-top: 32px;
@@ -35,9 +35,9 @@ main {
           margin-left: 1em;
           cursor: pointer;
 
-          &:hover {
-            color: #efefef;
-          }
+          //&:hover {
+          //  color: #efefef;
+          //}
         }
       }
 
@@ -83,8 +83,25 @@ main {
     font-family: Montserrat, sans-serif;
 
     h1 {
+      font-weight: bold;
+      font-size: 56pt;
       padding: 140px 0 40px 0;
       box-sizing: content-box;
+    }
+
+    h3 {
+      font-weight: bold;
+      margin-top: 16px;
+    }
+
+    div.cards {
+      > div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
     }
   }
 
