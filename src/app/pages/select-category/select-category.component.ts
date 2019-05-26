@@ -11,12 +11,12 @@ export class SelectCategoryComponent implements OnInit {
   categories: Category[] = [
     {
       name: 'Child psychologist',
-      url: '/assets/icons/child_psy.png',
+      url: '/assets/icons/kids.png',
       description: ''
     },
     {
       name: 'Family psychologist',
-      url: '',
+      url: '/assets/icons/child_psy.png',
       description: ''
     },
     {
@@ -26,7 +26,7 @@ export class SelectCategoryComponent implements OnInit {
     },
     {
       name: 'Psychotherapist',
-      url: '',
+      url: '/assets/icons/psy02.png',
       description: ''
     },
   ];
